@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://moodlev4.sbv.ifsp.edu.br/theme/image.php/boost/theme/1748854267/favicon">
+  <link rel="stylesheet" href="/src/styles.css">
+  <title>Projeto Formulário</title>
+</head>
+<body>
+  <h1 id="title">Formulário IFSP</h1>
+  <p id="description">Obrigado por matricular-se no IFSP - São João da Boa Vista</p>
+  <form id="survey-form">
+    <fieldset id="personal-data">
+      <legend>Dados</legend>
+      <label for="name-label">Nome<input id="name" type="text" placeholder="Digite seu nome" required /></label>
+      <label for="email-label">Email<input id="email" type="email" placeholder="Digite seu email" required /></label>
+      <label for="age-label">Idade<input id="age" type="number" placeholder="Idade" min="15" max="100" required /></label>
+    </fieldset>
+    <fieldset id="questions">
+      <legend>Perguntas</legend>
+      <label for="formacao">Qual sua formação atual?</label>
+      <select id="dropdown" name="formacao" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option value="medio">Ensino Médio</option>
+        <option value="tecnico">Curso Técnico</option>
+        <option value="integrado">Curso Técnico Integrado ao Médio</option>
+        <option value="graduacao">Graduação</option>
+      </select>
+      <label>Você recomendaria a instituição?</label>
+      <label>
+        <input type="radio" name="recomendacao" value="sim" checked />
+        Sim
+      </label>
+      <label>
+        <input type="radio" name="recomendacao" value="talvez" />
+        Talvez
+      </label>
+      <label>
+        <input type="radio" name="recomendacao" value="nao" />
+        Não
+      </label>
+      <label>Qual o seu próximo objetivo nos estudos?</label>
+      <label>
+        <input type="checkbox" value="undergraduate" checked>
+        Graduação
+      </label>
+      <label>
+        <input type="checkbox" value="master's">
+        Mestrado
+      </label>
+      <label>
+        <input type="checkbox" value="doctorate">
+        Doutorado
+      </label>
+    </fieldset>
+    <fieldset id="final-description">
+      <legend>Sugestões ou comentários?</legend>
+      <textarea id="bio" placeholder="Eu gostaria de..."></textarea>
+      <button id="submit">Enviar</button>
+    </fieldset>
+  </form>
+</body>
+</html>
